@@ -1,0 +1,9 @@
+Many computational systems provide a logging service so system administrators can keep tabs on a system’s activity as well as diagnose problems based on knowledge gleaned from the logs. Continuous and automated processing log entries can speed up the identification of problems as well as the process of implementing corrective measures. Web servers are examples of such systems. A web server log contains information regarding HTTP-based accesses to web pages hosted by the server, including the Internet Protocol (IP) address of the host accessing the page, the time of a particular access, the number of bytes sent by the server, and the specific page addresses that have been served.
+
+1. Write an application that reads in the logs produced by a web server. For each unique IP, compute the total number of bytes served to that IP address.
+
+2. Extend the application to return the top-K IPs that were served the most number of bytes.
+
+3. Extend the application to compute the total number of bytes served per time window of 1 hour, (with tumbling windows) for each unique IP.
+
+4. Modify the application to compute the same statistics for a subnet, i.e. aggregate across IPs based on a specified prefix. For instance, given that an IP (v4) address is 4 bytes, can you aggregate all data for IPs with the same first 3 bytes (MSB to LSB). As an example, aggregate bytes for all IP addresses that start with 123.100.099.*, i.e the last three digits can be anything.
